@@ -71,7 +71,6 @@ L2: core HD map + ODD stabilization
 L3: smart intersections at key junctions
 L4: full RSU deployment
 S0..S5 correspond to increasing levels (your paper's mapping)
-````
 
 ### Step 1) Compute generalized travel time matrix for each scenario
 
@@ -131,4 +130,3 @@ This repository provides the equation set, notation, level toggles (L0–L4), an
 Raw operational logs are not publicly shared due to data governance constraints; however, all scenario definitions and aggregation outputs required to reproduce the reported boundary (MCI) are provided.
 The pipeline is designed to be re-applied to other regions using the same minimum schema (Trip/Dispatch/OD/Waiting/Event).
 
-`````
