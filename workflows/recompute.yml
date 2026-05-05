@@ -1,0 +1,31 @@
+name: Recompute MCI Boundary
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "outputs/scenario_summary.csv"
+      - "scripts/recompute_mci.py"
+      - ".github/workflows/recompute.yml"
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run recompute script
+        run: |
+          python scripts/recompute_mci.py --input outputs/scenario_summary.csv --output outputs/recomputed_summary.csv --threshold 1.0
+
+      - name: Upload recomputed summary as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: recomputed_summary
+          path: outputs/recomputed_summary.csv
