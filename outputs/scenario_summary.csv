@@ -1,0 +1,6 @@
+Scenario,Level,DeltaA_cum_percent_vs_S0,DeltaA_grav_percent_vs_S0,Incremental_gain_percent_vs_prev,Cost_ratio_vs_prev,MCI,MonteCarlo_N,P_DeltaA_gt_0,Notes
+S0,L0,0.0,,,,,,,"Baseline"
+S1,L1,,,,,,,,,"Not explicitly reported (fill from simulation outputs if available)"
+S2,L2,18.3,,,,,,,"Core HD mapping"
+S3,L3,22.7,,4.4,,,"1000",0.973,"Smart intersections at 5 key junctions; robustness reported at L3"
+S4,L4,26.8,,4.1,3.2,0.43,,, "Full RSU deployment; +4.1% over L3; cost is 3.2x L3; boundary at L3→L4"
